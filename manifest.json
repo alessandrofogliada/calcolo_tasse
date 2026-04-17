@@ -1,0 +1,17 @@
+{
+    "name": "Simulatore Fattura",
+    "short_name": "Simulatore",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#0f172a",
+    "theme_color": "#2563eb",
+    "description": "Calcola imposte, contributi e netto per ogni fattura.",
+    "icons": [
+      {
+        "src": "/1.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
