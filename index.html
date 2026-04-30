@@ -145,8 +145,13 @@ button:active {
 
     <div class="input-wrap">
       <span>€</span>
-      <input id="fattura" type="number" placeholder="Es. 1500" />
-    </div>
+      <input 
+      id="fattura"
+      type="text"
+      inputmode="decimal"
+      pattern="[0-9]*"
+      placeholder="Es. 1500"
+    />    </div>
 
     <button onclick="calcola()">Calcola</button>
 
@@ -190,8 +195,8 @@ function euro(v){
 }
 
 function calcola(){
-  let f = parseFloat(document.getElementById("fattura").value);
-
+  let raw = document.getElementById("fattura").value.replace(",", ".");
+  let f = parseFloat(raw);
   if(!f || f<=0){
     alert("Inserisci un importo valido");
     return;
